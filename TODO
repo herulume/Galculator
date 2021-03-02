@@ -1,0 +1,25 @@
+
+Galculator is a prototype. Many things are still missing:
+
+* Indirect equality tactics in proofs
+* Deal with implications
+* Validate identifiers and locate conflicts
+* Saving of proofs
+* Relators
+* Free-theorems
+* Help menu
+* Documentation (Haddock and manual)
+* Tests
+
+Improvements:
+* Remove many (once ...) (very poor definition)
+
+Possible bugs:
+* Type equality in type annotations
+* Type equality in safe cast of DEF
+
+Ideas:
+* Algebraic manipulation of rewriting strategies in order to simplify them and
+  identify possible non-termination situations.
+* Automatically classify the rules according with the multiplicity of symbols.
+* Proof steps seen as relations and thus proofs can be rewriten and simplified.

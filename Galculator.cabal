@@ -1,0 +1,117 @@
+
+Name:               Galculator
+Version:            0.0.1
+Stability:          experimental
+License:            LGPL
+License-file:       LICENSE
+Copyright:          (c) Paulo Silva
+Cabal-Version:      >= 1.2
+Author:             Paulo Silva
+Maintainer:         paufil@di.uminho.pt
+Homepage:           http://wiki.di.uminho.pt/twiki/bin/view/Main/PauloSilva 
+
+Synopsis:           A proof assistant based on Galois connections.
+Description:        The Galculator is a prototype of a proof assistant based on 
+                    the algebra of Galois connections. When combined with the 
+                    pointfree transform and tactics such as the indirect 
+                    equality principle, Galois connections offer a very 
+                    powerful, generic device to tackle the complexity of proofs.
+Category:           Proof assistants
+
+Build-type:         Simple
+Extra-source-files: AUTHORS,
+                    INSTALL,
+                    README,
+                    TODO,
+                    src/Language/R/Syntax.hs-boot
+                    src/Language/Type/Syntax.hs-boot
+                
+Executable galculator
+  Build-Depends:    base, 
+                    array, 
+                    containers,
+                    old-locale,
+                    old-time, 
+                    filepath,
+                    directory,
+                    process, 
+                    readline,
+                    parsec, 
+                    mtl
+  Main-is:          Galculator.hs
+  Hs-source-dirs:   src
+  Extensions:       
+                    EmptyDataDecls,
+                    ExistentialQuantification,
+                    FlexibleContexts,
+                    FlexibleInstances,
+                    FunctionalDependencies,
+                    GADTs, 
+                    MultiParamTypeClasses,
+                    PatternSignatures,
+                    Rank2Types,
+                    TypeOperators, 
+                    TypeSynonymInstances
+  Ghc-options:      -Wall
+  Other-modules:    
+                    Control.GalcError
+                    Control.MonadOr
+                    Control.MonadPosition
+                    Control.Monad.Fresh
+                    Data.Env
+                    Data.Equal
+                    Data.Existential
+                    Data.Stream
+                    Galculator.Engine.GcToLaw
+                    Galculator.Engine.LawToRule
+                    Galculator.Evaluate
+                    Galculator.Interpreter
+                    Galculator.Proof
+                    Galculator.Rule
+                    Galculator.RunCommand
+                    Galculator.State
+                    Galculator.StepEval
+                    Language.Combinator.Parser
+                    Language.Combinator.Syntax
+                    Language.Command.Parser
+                    Language.Command.Syntax
+                    Language.Derivation.Parser
+                    Language.Derivation.Syntax
+                    Language.Law.Parser
+                    Language.Law.Refresh
+                    Language.Law.Syntax
+                    Language.Law.SyntaxADT
+                    Language.Law.TypeInference
+                    Language.Law.Verify
+                    Language.Module.Parser
+                    Language.Module.Refresh
+                    Language.Module.Syntax
+                    Language.Module.SyntaxADT
+                    Language.Module.TypeInference
+                    Language.Module.Verify
+                    Language.R.Constraint
+                    Language.R.Equality
+                    Language.R.Match
+                    Language.R.Parser
+                    Language.R.Pretty
+                    Language.R.Refresh
+                    Language.R.Rewrite
+                    Language.R.SafeCast
+                    Language.R.Spine
+                    Language.R.Syntax
+                    Language.R.SyntaxADT
+                    Language.R.TypeInference
+                    Language.R.Verify
+                    Language.Step.Parser
+                    Language.Step.Syntax
+                    Language.Type.Constraint
+                    Language.Type.Equality
+                    Language.Type.Parser
+                    Language.Type.Pretty
+                    Language.Type.Rewrite
+                    Language.Type.Syntax
+                    Language.Type.Unification
+                    Language.Type.Utils
+                    
+                    
+                    
